@@ -1,0 +1,15 @@
+{
+  "name": "recipe-master",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Recipe Master — full-stack Indian recipe platform (React frontend + Express backend)",
+  "scripts": {
+    "install:all": "npm install --prefix server && npm install --prefix client",
+    "dev": "concurrently -n server,client -c green,cyan \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "build": "npm run build --prefix client",
+    "start": "npm run build && npm run start --prefix server"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
